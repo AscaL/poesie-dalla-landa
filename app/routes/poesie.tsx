@@ -5,10 +5,10 @@ export default function PoesieRoute() {
   return (
     <div>
       <Heading size={"md"}>
-        <Link to="/" aria-label="Poèsie">
+        <Link prefetch="intent" to="/" aria-label="Poèsie">
           Home
         </Link>{" "}
-        <Link to="/poesie" aria-label="Random Poèsia">
+        <Link prefetch="intent" to="/poesie" aria-label="Random Poèsia">
           Poesie
         </Link>
       </Heading>

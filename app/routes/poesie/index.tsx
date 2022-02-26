@@ -1,6 +1,6 @@
-import { Box, Center, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import type { LoaderFunction } from "remix";
-import { useLoaderData, Link, useCatch } from "remix";
+import { useLoaderData, useCatch } from "remix";
 import type { Poesia } from "prisma/prisma-client";
 import { db } from "~/utils/db.server";
 import { PoesiaDisplay } from "~/components/Poesia";

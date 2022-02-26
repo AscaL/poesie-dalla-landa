@@ -28,6 +28,7 @@ export function PoesiaCardDisplay({ poesia }: { poesia: Poesia }) {
 
           <Box py={5} textAlign="center">
             <Link
+              prefetch="intent"
               to={`poesie/${poesia.id}`}
               style={{
                 display: "block",

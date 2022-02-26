@@ -1,5 +1,4 @@
 import { Box, VStack, Image } from "@chakra-ui/react";
-import { Link } from "remix";
 import type { Poesia } from "prisma/prisma-client";
 import { PoesiaCardDisplay } from "./PoesiaCard";
 
