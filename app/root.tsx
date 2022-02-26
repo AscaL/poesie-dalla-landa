@@ -8,7 +8,15 @@ import {
   useCatch,
 } from "remix";
 import type { MetaFunction } from "remix";
-import { ChakraProvider, Box, Heading, CSSReset } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  Box,
+  Heading,
+  CSSReset,
+  Image,
+  Center,
+} from "@chakra-ui/react";
+import logo from "../public/title.png";
 
 export const meta: MetaFunction = () => {
   const title = `Poèsie dalla Landa`;
@@ -21,6 +29,9 @@ export default function App() {
     <Document>
       <ChakraProvider>
         <CSSReset />
+        <Center>
+          <Image src={logo}></Image>
+        </Center>
         <Outlet />
       </ChakraProvider>
     </Document>

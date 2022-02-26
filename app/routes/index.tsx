@@ -30,9 +30,6 @@ export default function Index() {
 
   return (
     <Container>
-      <Center>
-        <Heading>Poèsie dalla Landa</Heading>
-      </Center>
       <Box>
         <PoesieList poesie={data}></PoesieList>
       </Box>
