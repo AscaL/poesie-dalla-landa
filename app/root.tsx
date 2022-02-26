@@ -15,8 +15,20 @@ import {
   CSSReset,
   Image,
   Center,
+  extendTheme,
 } from "@chakra-ui/react";
 import logo from "../public/title.png";
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      // styles for the `body`
+      body: {
+        bg: "gray.800",
+      },
+    },
+  },
+});
 
 export const meta: MetaFunction = () => {
   const title = `Poèsie dalla Landa`;
@@ -27,7 +39,7 @@ export const meta: MetaFunction = () => {
 export default function App() {
   return (
     <Document>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <CSSReset />
         <Center>
           <Image src={logo}></Image>

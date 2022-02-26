@@ -8,8 +8,8 @@ export function PoesiaCardDisplay({ poesia }: { poesia: Poesia }) {
   return (
     <Box>
       <Flex
-        bg={"#F9FAFB"}
-        p={15}
+        bg={"grey.100"}
+        p={2}
         w="full"
         alignItems="center"
         justifyContent="center">
@@ -20,11 +20,13 @@ export function PoesiaCardDisplay({ poesia }: { poesia: Poesia }) {
           rounded="sm"
           overflow="hidden"
           mx="auto">
-          <Image
-            fit="cover"
-            src={poesia.imgUrl || "https://picsum.photos/seed/picsum/400"}
-            alt="avatar"
-          />
+          <Link prefetch="intent" to={`poesie/${poesia.id}`}>
+            <Image
+              fit="cover"
+              src={poesia.imgUrl || "https://picsum.photos/id/1084/400"}
+              alt="avatar"
+            />
+          </Link>
 
           <Box py={5} textAlign="center">
             <Link
