@@ -10,7 +10,6 @@ type PoesieDataList = { id: string; name: string; imgUrl: string | null };
 export const loader: LoaderFunction = async () => {
   const poesieDataList: PoesieDataList[] = await db.poesia.findMany({
     take: 15,
-    orderBy: { createdAt: "desc" },
     select: { id: true, name: true, imgUrl: true },
   });
 
