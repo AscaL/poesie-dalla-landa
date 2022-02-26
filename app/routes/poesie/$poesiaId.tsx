@@ -3,6 +3,7 @@ import { useLoaderData, useCatch, useParams } from "remix";
 import type { Poesia } from "prisma/prisma-client";
 import { db } from "~/utils/db.server";
 import { Box, Center, Heading, Text } from "@chakra-ui/react";
+import { PoesiaDisplay } from "~/components/Poesia";
 
 export const meta: MetaFunction = ({
   data,
@@ -24,7 +25,7 @@ export const meta: MetaFunction = ({
 type LoaderData = Poesia;
 
 export const loader: LoaderFunction = async ({ params }) => {
-  const poesia: Poesia = await db.poesia.findUnique({
+  const poesia: Poesia | null = await db.poesia.findUnique({
     where: { id: params.poesiaId },
   });
   if (!poesia) {
@@ -42,12 +43,7 @@ export default function PoesiaRoute() {
 
   return (
     <Box>
-      <Center>
-        <Heading>{data.name}</Heading>
-      </Center>
-      <Text>{data.content}</Text>
-      <br />
-      <Text>Author: {data.author}</Text>
+      <PoesiaDisplay poesia={data} />
     </Box>
   );
 }

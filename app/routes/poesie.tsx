@@ -1,4 +1,4 @@
-import { Container, Divider, Heading } from "@chakra-ui/react";
+import { Box, Center, Container, Divider, Heading } from "@chakra-ui/react";
 import { Link, Outlet } from "remix";
 
 export default function PoesieRoute() {
@@ -13,9 +13,9 @@ export default function PoesieRoute() {
         </Link>
       </Heading>
       <Divider />
-      <Container>
+      <Center>
         <Outlet />
-      </Container>
+      </Center>
     </div>
   );
 }
