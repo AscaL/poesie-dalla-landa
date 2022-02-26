@@ -5,15 +5,16 @@ import { PoesieList } from "~/components/PoesieList";
 import { db } from "~/utils/db.server";
 
 type LoaderData = Poesia[];
+type PoesieDataList = { id: string; name: string; imgUrl: string | null };
 
 export const loader: LoaderFunction = async () => {
-  const poesieDataList: Poesia[] | null = await db.poesia.findMany({
+  const poesieDataList: PoesieDataList[] = await db.poesia.findMany({
     take: 15,
     orderBy: { createdAt: "desc" },
     select: { id: true, name: true, imgUrl: true },
   });
 
-  const data: LoaderData = poesieDataList;
+  const data: PoesieDataList[] = poesieDataList;
   return data;
 };
 
