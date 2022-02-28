@@ -1,0 +1,12 @@
+/* permanent-marker-regular - latin */
+@font-face {
+  font-family: "permanent-marker";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(""),
+    url("/fonts/permanent-marker/permanent-marker-v10-latin-regular.woff2")
+      format("woff2"),
+    url("/fonts/permanent-marker/permanent-marker-v10-latin-regular.woff")
+      format("woff");
+}

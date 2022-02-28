@@ -1,5 +1,15 @@
 import { Text, Center, Box, Divider, Heading } from "@chakra-ui/react";
-import { Link, Outlet } from "remix";
+import { Link, LinksFunction, Outlet } from "remix";
+import styles from "~/styles/index.css";
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: styles,
+    },
+  ];
+};
 
 export default function PoesieRoute() {
   return (

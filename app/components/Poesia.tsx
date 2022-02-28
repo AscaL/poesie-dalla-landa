@@ -2,8 +2,6 @@ import { Box, Text, Center, Image, Heading, Flex } from "@chakra-ui/react";
 import type { Poesia } from "prisma/prisma-client";
 import { Link } from "remix";
 
-//todo: add the img thumb
-
 export function PoesiaDisplay({ poesia }: { poesia: Poesia }) {
   return (
     <Box>
@@ -42,7 +40,10 @@ export function PoesiaDisplay({ poesia }: { poesia: Poesia }) {
                 {poesia.name}
               </Heading>
             </Link>
-            <Text mt={4} color={"pink.600"}>
+            <Text
+              mt={4}
+              color={"pink.600"}
+              fontFamily={"'permanent-marker', fantasy"}>
               {poesia.content}
             </Text>
 
