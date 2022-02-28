@@ -12,7 +12,7 @@ export default function PoesieRoute() {
           <Text color="pink">Poesie</Text>
         </Link>
       </Heading>
-      <Divider />
+      <Divider variant={"dashed"} />
       <Center>
         <Outlet />
       </Center>
